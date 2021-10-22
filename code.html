@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Hamming code</title>
     <script>
         function code(){
@@ -24,14 +25,17 @@
                 if((inputDigits[0]+inputDigits[1]+inputDigits[3])%2==inputDigits[5]) {
                     if ((inputDigits[1] + inputDigits[2] + inputDigits[3]) % 2 != inputDigits[6]) {
                         inputDigits[6]=1-inputDigits[6]
+                        alert("ошибка в 7 бите")
                     }
                 }
                 else{
                     if ((inputDigits[1] + inputDigits[2] + inputDigits[3]) % 2 != inputDigits[6]){
                         inputDigits[1]=1-inputDigits[1]
+                        alert("ошибка во 2 бите")
                     }
                     else{
                         inputDigits[5]=1-inputDigits[5]
+                        alert("ошибка в 6 бите")
                     }
                 }
             }
@@ -39,14 +43,17 @@
                 if((inputDigits[0]+inputDigits[2]+inputDigits[3])%2==inputDigits[4]) {
                     if ((inputDigits[1] + inputDigits[2] + inputDigits[3]) % 2 != inputDigits[6]) {
                         inputDigits[6]=1-inputDigits[6]
+                        alert("ошибка в 7 бите")
                     }
                 }
                 else{
                     if ((inputDigits[1] + inputDigits[2] + inputDigits[3]) % 2 != inputDigits[6]){
                         inputDigits[2]=1-inputDigits[2]
+                        alert("ошибка в 3 бите")
                     }
                     else{
                         inputDigits[4]=1-inputDigits[4]
+                        alert("ошибка в 5 бите")
                     }
                 }
             }
@@ -54,14 +61,17 @@
                 if((inputDigits[0]+inputDigits[2]+inputDigits[3])%2==inputDigits[4]) {
                     if ((inputDigits[0] + inputDigits[1] + inputDigits[3]) % 2 != inputDigits[5]) {
                         inputDigits[5]=1-inputDigits[5]
+                        alert("ошибка в 6 бите")
                     }
                 }
                 else{
                     if ((inputDigits[0] + inputDigits[1] + inputDigits[3]) % 2 != inputDigits[5]){
                         inputDigits[0]=1-inputDigits[0]
+                        alert("ошибка в 1 бите")
                     }
                     else{
                         inputDigits[4]=1-inputDigits[4]
+                        alert("ошибка в 5 бите")
                     }
                 }
             }
@@ -69,6 +79,7 @@
                 if ((inputDigits[0]+inputDigits[2]+inputDigits[3])%2!=inputDigits[4]){
                     if ((inputDigits[0] + inputDigits[1] + inputDigits[3]) % 2 != inputDigits[5]){
                         inputDigits[3]=1-inputDigits[3]
+                        alert("ошибка в 3 бите")
                     }
                 }
             }
@@ -84,3 +95,4 @@
         <p> <input type='text' id="decodedData" /> decode data </p>
     </body>
 </html>
+
